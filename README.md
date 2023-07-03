@@ -4,7 +4,7 @@ This is a Python project that monitors the International Space Station (ISS) usi
 ## Requirements
 - Python 3.x
 - `requests` library
-- 
+
 ## Setup
 1. Clone the repository or download the project files.
 2. Install the required libraries by running the following command:
