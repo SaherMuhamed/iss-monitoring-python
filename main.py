@@ -19,15 +19,21 @@ lat_info = Information()
 long_info.goto(x=-530, y=-190)
 lat_info.goto(x=-530, y=-210)
 
+
+def get_location(website_url):
+    try:
+        return requests.get(url=website_url).json()
+    except requests.exceptions.ConnectionError:
+        pass
+
+
 is_on = True
 while is_on:
-    time.sleep(0.3)
+    time.sleep(0.7)
     screen.update()
     station.showturtle()
-    response = requests.get(url="http://api.open-notify.org/iss-now.json")
-    response.raise_for_status()
-    api_data = response.json()
 
+    api_data = get_location(website_url="http://api.open-notify.org/iss-now.json")
     longitude = float(api_data["iss_position"]["longitude"])
     latitude = float(api_data["iss_position"]["latitude"])
 
@@ -41,6 +47,6 @@ while is_on:
     iss_position = (longitude, latitude)
     print(iss_position)
 
-    station.goto(x=longitude*3, y=latitude*3)
+    station.goto(x=longitude * 3, y=latitude * 3)
 
 screen.exitonclick()
