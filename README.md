@@ -16,7 +16,7 @@ This is a Python project that monitors the International Space Station (ISS) usi
 ![](screenshots/Screenshot-2023-07-03-030646.png)
 
 ## Usage
-1. Open the `iss_monitoring.py` file in a Python IDE or text editor.
+1. Open the `main.py` file in a Python IDE or text editor.
 2. Run the script.
 3. The ISS Monitoring application window will open, displaying a world map as the background.
 4. The ISS location will be represented by <mark>an animated ISS icon moving on the map</mark>.
@@ -25,7 +25,7 @@ This is a Python project that monitors the International Space Station (ISS) usi
 7. To stop the program, close the application window or press Ctrl+C in the terminal.
 
 ## Project Structure
-- `iss_monitoring.py`: The main Python script that monitors the ISS location and updates the display.
+- `main.py`: The main Python script that monitors the ISS location and updates the display.
 - `images/world_map.png`: Background image of the world map.
 - `images/iss.gif`: Animated image of the ISS.
 
